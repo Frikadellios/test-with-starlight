@@ -4,4 +4,4 @@
 /// <reference lib="dom" />
 /// <reference lib="dom.iterable" />
 
-type MyAttributes = astroHTML.JSX.ImgHTMLAttributes;
+type MyAttributes = astroHTML.JSX.ImgHTMLAttributes

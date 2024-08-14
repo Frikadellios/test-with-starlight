@@ -28,6 +28,7 @@
     "browserslist:update": "bunx update-browserslist-db@latest"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@octokit/rest": "^21.0.1",
     "@octokit/types": "^13.5.0",
     "@types/bun": "latest",
@@ -36,6 +37,9 @@
     "@types/node": "^22.3.0",
     "@types/three": "^0.167.1",
     "@types/web": "^0.0.154",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "rehype-autolink-headings": "^7.1.0",
     "unplugin-auto-import": "^0.18.2"
   },
@@ -89,5 +93,6 @@
     "three": "^0.167.1",
     "vite": "^5.4.0",
     "zod": "^3.23.8"
-  }
+  },
+  "trustedDependencies": ["@biomejs/biome"]
 }

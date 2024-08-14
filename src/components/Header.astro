@@ -8,21 +8,21 @@ import { MoveUpRight } from 'lucide-react'
 import SocialIcons from './SocialIcons.astro'
 
 interface Link {
-  name: string
-  href: string
-  slug?: string
+	name: string
+	href: string
+	slug?: string
 }
 
 const links: Link[] = [
-  {
-    name: 'docs',
-    href: '/docs',
-    slug: '/docs',
-  },
-  {
-    name: 'Status',
-    href: 'https://salo-ai.pages.dev',
-  },
+	{
+		name: 'docs',
+		href: '/docs',
+		slug: '/docs'
+	},
+	{
+		name: 'Status',
+		href: 'https://salo-ai.pages.dev'
+	}
 ]
 const { slug } = Astro.props
 ---

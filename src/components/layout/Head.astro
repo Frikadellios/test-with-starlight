@@ -4,18 +4,15 @@ import type { Props } from '@astrojs/starlight/props'
 // Supports weights 100-900
 import '@fontsource-variable/inter'
 import '@/styles/globals.css'
-import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import ProviderAnimations from '@/components/layout/ProviderAnimations.astro'
 import Container from '@/components/layout/container.astro'
 import TailwindIndicator from '@/components/layout/tailwind-indicator.astro'
 import { cn } from '@/lib/utils'
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
-const ogImageUrl = new URL(
-  `/og/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
-  Astro.site,
-)
+const ogImageUrl = new URL(`/og/${Astro.props.id.replace(/\.\w+$/, '.png')}`, Astro.site)
 ---
 
 <Default {...Astro.props}><slot /></Default>

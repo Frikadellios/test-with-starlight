@@ -1,17 +1,15 @@
 ---
 import '@/styles/globals.css'
-import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import ProviderAnimations from '@/components/layout/ProviderAnimations.astro'
 import Container from '@/components/layout/container.astro'
 import TailwindIndicator from '@/components/layout/tailwind-indicator.astro'
 import { cn } from '@/lib/utils'
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
 
 type Props = {
 	mainClass?: string
 	bodyClass?: string
 }
-
-
 
 const { mainClass, bodyClass } = Astro.props as Props
 ---
