@@ -6,39 +6,40 @@ import tailwindcss from '@tailwindcss/vite';
 import rehypeExternalLinks from 'rehype-external-links';
 import mdx from '@astrojs/mdx';
 import { remarkReadingTime } from './src/lib/readTime';
-import AutoImport from 'unplugin-auto-import/astro'
+import AutoImport from 'unplugin-auto-import/astro';
+
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     build: {
-        cssMinify: 'lightningcss'
-    },
+      cssMinify: 'lightningcss'
+    }
   },
   site: SITE,
   prefetch: {
     defaultStrategy: 'viewport',
     prefetchAll: true
   },
-  integrations: [
-    AutoImport({
-        defaultExportByFilename: false,
-        include: [
-            /\.[tj]sx?$/ // .ts, .tsx, .js, .jsx
-        ],
-        packagePresets: ['detect-browser-es'],
-        imports: ['react', 'react-router'],
-        dirs: ['./src/utils/*.ts', './src/hooks'],
-        dts: './src/auto-imports.d.ts'
-    }),
-    starlight({
-    title: 'My Docs',
+  integrations: [AutoImport({
+    defaultExportByFilename: false,
+    include: [/\.[tj]sx?$/, /\.md$/],
+    packagePresets: ['detect-browser-es'],
+    imports: ['react', 'react-router'],
+    viteOptimizeDeps: true,
+    injectAtEnd: true,
+    dirs: ['./src/utils/*.ts', './src/hooks'],
+    dts: './src/auto-imports.d.ts'
+  }), starlight({
+    title: 'All I neeed... Its a code tonight',
     social: {
       github: 'https://github.com/withastro/starlight'
     },
     components: {
-      Head: './src/components/layout/Head.astro'
+      Head: './src/components/layout/Head.astro',
+      Header: './src/components/Header.astro',
+      SocialIcons: './src/components/SocialIcons.astro'
     },
     customCss: ['./src/styles/globals.css', './src/styles/headings.css'],
     sidebar: [{

@@ -1,0 +1,10 @@
+---
+import Default from '@astrojs/starlight/components/SocialIcons.astro'
+import type { Props } from '@astrojs/starlight/props'
+import { Plus } from 'lucide-react'
+---
+
+<Default {...Astro.props} />
+<a href="https://github.com/Frikadellios/shadylight" target="_blank" class="flex h-4 w-4 hover:opacity-[0.66]">
+  <Plus width={16} height={16} />
+</a>
