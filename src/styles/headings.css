@@ -1,0 +1,10 @@
+
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a {
+    color: oklch(69.59% 0.149 162.48);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }

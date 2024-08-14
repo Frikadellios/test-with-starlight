@@ -1,0 +1,50 @@
+---
+import '@/styles/globals.css'
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
+import ProviderAnimations from '@/components/layout/ProviderAnimations.astro'
+import Container from '@/components/layout/container.astro'
+import TailwindIndicator from '@/components/layout/tailwind-indicator.astro'
+import { cn } from '@/lib/utils'
+
+type Props = {
+	mainClass?: string
+	bodyClass?: string
+}
+
+
+
+const { mainClass, bodyClass } = Astro.props as Props
+---
+
+<!doctype html>
+<html class="bg-trancperent text-foreground scroll-smooth">
+	<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <ViewTransitions />
+		<ProviderAnimations />
+	</head>
+	<body class={cn('flex flex-col font-sans antialiased min-h-screen', bodyClass)}>
+		<Container>
+			<main class={cn(mainClass)}>
+				<slot />
+				<TailwindIndicator />
+			</main>
+		</Container>
+		<style is:global>
+			body {
+				font-family: 'Inter', sans-serif;
+			}
+			img {
+				content-visibility: auto;
+			}
+		</style>
+	</body>
+</html>
