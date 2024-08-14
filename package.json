@@ -36,7 +36,8 @@
     "@types/node": "^22.3.0",
     "@types/three": "^0.167.1",
     "@types/web": "^0.0.154",
-    "rehype-autolink-headings": "^7.1.0"
+    "rehype-autolink-headings": "^7.1.0",
+    "unplugin-auto-import": "^0.18.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -69,22 +70,19 @@
     "caniuse-lite": "^1.0.30001651",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "detect-browser-es": "^0.1.0",
     "editorconfig-checker": "^5.1.8",
     "framer-motion": "^11.3.27",
     "lodash-es": "^4.17.21",
     "lucide-react": "^0.427.0",
     "nanostores": "^0.11.2",
     "next-themes": "^0.3.0",
-    "postcss": "^8.4.41",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
     "react-use-measure": "^2.1.1",
     "reading-time": "^1.5.0",
     "rehype-external-links": "^3.0.0",
-    "rehype-pretty-code": "^0.13.2",
-    "rehype-slug": "^6.0.0",
-    "remark-breaks": "^4.0.0",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.5.2",
     "tailwindcss": "^4.0.0-alpha.19",
